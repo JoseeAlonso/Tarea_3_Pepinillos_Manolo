@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pepinillo_con-clase.png" name="pepinillo_millonario">
+    <title>Pepinillos Manolo</title>
+</head>
+
+<body>
+    <h1>Pepinillos Manolo</h1>
+    <img src="pepinillo_con-clase.png" alt="Pepinillo con clase" width="175">
+    <p></p>
+    <strong><a
+            href="https://latiendadesami.com/categoria-producto/encurtidos/pepinillos/?srsltid=AfmBOooWZZsakXsMdhm_Acq-C9i2Y51wZ0jZ8mMUsQFomJSstUDtdxwZ"
+            target="_blank">Compra nuestros pepinillos aquí</a></strong>
+    <h2>Formulario de pedidos</h2>
+    <p>Aquí podrás realizar un pedido de los deliciosos y jugosos pepinillos de Manolo...¡Siempre en tu mesa!</p>
+
+    <section id="tipos_pepinillos" name="tipos_pepinillos">
+        <ul>
+            <li>
+                <h3>Pepinillos en vinagre</h3>
+                <img src="https://www.aceitunaslorente.com/wp-content/uploads/2019/03/Pepinillos-en-Vinagre-en-Conserva-Propiedades-y-Beneficios-para-tu-Salud.png"
+                    alt="Pepinillos en un plato" width="300">
+            </li>
+            <li>
+                <h3>Pepinillos naturales</h3>
+                <img src="https://jansonfarms.com/wp-content/uploads/2021/05/Mini-Pepinos-e1652362590294.jpg"
+                    alt="Pepinillos naturales" width="300">
+            </li>
+            <li>
+                <h3>Pepinillos del diablo</h3>
+                <img src="https://4.bp.blogspot.com/-YxWWzT4RHx0/VGSG1rG5qBI/AAAAAAAABEk/SW9JUvhaeTM/s1600/pepinillo_del_diablo4_Portal_Jardin.jpg"
+                    alt="Pepinillos del diablo" width="300">
+            </li>
+            <li>
+                <h3>Pepinillos para hamburguesas</h3>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/JA22LEPVXREQVA4ZTU2NH7RKCI.jpg"
+                    alt="Pepinillos para hamburguesas" width="300">
+            </li>
+        </ul>
+    </section>
+    <form>
+        <section id="pedidos_recientes" name="pedidos_recientes">
+            <h2><em>Pedidos recientes</em></h2>
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Nº Pedido</th>
+                        <th>Fecha</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>2024-05-01</td>
+                        <td>25.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>2024-05-03</td>
+                        <td>15.50 €</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>2024-05-05</td>
+                        <td>30.75 €</td>
+                    </tr>
+                </tbody>
+                <foot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td><strong>71.25 €</strong></td>
+                    </tr>
+                </foot>
+            </table>
+        </section>
+    </form>
+    <p></p>
+    <form>
+        <h2><strong>Realiza tu Pedido</strong></h2>
+        <section id="Formulario de Pedido" name="Formulario_de_Pedido">
+            <fieldset>
+                <legend>Datos del cliente</legend>
+                <p></p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                <p></p>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@ejemplo.com" required>
+                <p></p>
+                <label for="telefono">Teléfono*:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="555-555-555" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+                <p><em>*Sin guiones</em></p>
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>Detalles del pedido</legend>
+                <p></p>
+                <label for="Cantidad">Cantidad de Productos:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="20">
+                <p></p>
+                <label>Tipo de Pepinillo*:</label>
+                <select name="tipo_pepinillo" multiple size="4">
+                    <optgroup label="Elige el tipo de pepinillo">
+                        <option value="vinagre">Pepinillos en vinagre</option>
+                        <option value="naturales">Pepinillos naturales</option>
+                        <option value="diablo">Pepinillos del diablo</option>
+                        <option value="hamburguesa">Pepinillos para hamburguesas</option>
+                    </optgroup>
+                </select>
+                <p><em>*Mantén pulsado la tecla ctrl para seleccionar más de una opción</em></p>
+                <p></p>
+                <label for="instrucciones">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"
+                    placeholder="Escribe aquí cualquier instrucción adicional para tu pedido..."></textarea>
+                <p></p>
+                <input id="archivos" type="file" name="archivos" accept=".pdf,.jpg" multiple>
+                <p></p>
+                <progress value="40" max="100" id="progreso" name="barra_progreso"></progress>
+            </fieldset>
+            <p></p>
+            <button id="enviar_pedido" type="submit">Enviar Pedido</button>
+            <button id="resetear_formulario" type="reset">Limpiar Formulario</button>
+        </section>
+    </form>
+</body>
+<footer>
+    <p>&copy; 2025 Pepinillos Manolo. Todos los derechos reservados.</p>
+</footer>
+</html>
